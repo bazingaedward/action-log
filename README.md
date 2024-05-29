@@ -11,56 +11,9 @@ You can use this project as a template for the SDK library manually uploaded by 
 - Vitest 1.6.x
 - Lodash 4.17.x
 
-
 ## Design Concept
 - "single" mode: events trigger immediately
 - "flush" mode: set the cache queue length in memory.When accumulated to the limit number of events, report them all at once.
-
-
-## Usage
-
-```ts
-import {ActionLog} from '@xx/action-log'
-// init
-const al = new ActionLog()
-
-al.init({
-    module: 'businessModule',
-    version: 1
-}, {
-    debug: false,
-    mode: 'single'
-})
-
-al.send({
-    eventType: 'click',
-    eventName: 'xxxx'
-})
-```
-
-## Testing
-
-Refer to index.test.ts for specific usage methods.
-```
-pnpm run test
-```
-
-
-## 字段说明
-
-# action-log
-Frontend Manual Data Tracking Tool SDK
-
-## Purpose
-You can use this project as a template for the SDK library manually uploaded by the company internally, which implements basic naming and upload specifications.
-
-## Technologies Used
-- Typescript
-- Vitest
-
-## Design Concept
-- "single" mode: events trigger immediately
-- "flush" mode: set the cache queue length in memory
 
 ## Usage
 
